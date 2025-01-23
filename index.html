@@ -1,0 +1,22 @@
+<input type="checkbox" value="C++" class="checkbox">C++
+<input type="checkbox" value="Python" class="checkbox">Python
+<input type="checkbox" value="Java" class="checkbox">Java
+<button onclick="msg()">click me</button>
+<p id="result">Your Skills are </p>
+
+<script>
+    function msg()
+    {
+    var skills = ""
+    var a = document.querySelectorAll(".checkbox")
+    var result = document.getElementById("result")
+    a.forEach(function(b)
+    {
+    if(b.checked == true)
+    {
+        skills = skills+b.value
+        result.textContent = "Your Skills are "+skills
+    }
+    })
+}
+</script>
